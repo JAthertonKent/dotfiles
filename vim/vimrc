@@ -1,0 +1,74 @@
+set nocompatible            " get rid of Vi compatibility mode
+filetype plugin indent on   " filetype detection[ON] plugin [ON] indent[ON]
+filetype off                " required!
+set t_Co=256                " enable 256-color mode
+syntax enable               " enable syntax highlighting (previously syntax on).
+set mouse=a                 " Automatically enable mouse usage
+"colorscheme wombat256 
+
+set nu              " show line numbers
+
+set laststatus=2        " Always display the status line
+filetype indent on      " activates indenting for files
+
+set rtp+=~/.vim/bundle/vundle/ 
+call vundle#rc() 
+Bundle 'airblade/vim-gitgutter'
+Bundle "scrooloose/nerdtree"
+Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-rails'
+Bundle 'spf13/vim-autoclose'
+Bundle 'kien/ctrlp.vim'
+Bundle 'vim-scripts/sessionman.vim'
+Bundle 'matchit.zip'
+Bundle 'Lokaltog/vim-easymotion'
+Bundle 'jistr/vim-nerdtree-tabs'
+Bundle 'mbbill/undotree'
+Bundle 'myusuf3/numbers.vim'
+Bundle 'garbas/vim-snipmate'
+Bundle 'honza/vim-snippets'
+Bundle 'Shougo/neocomplcache'
+Bundle 'Shougo/neosnippet'
+Bundle 'honza/vim-snippets'
+
+" Bundle Configs
+" NerdTree 
+let mapleader = ";"
+map <leader>n :NERDTree<cr>
+let g:NERDTreeWinPos = "right"
+" Indent Guides
+let g:indent_guides_auto_colors = 0
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=3
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=4
+ 
+set nowrap          " Dont wrap lines
+set nobackup
+set nowritebackup
+set history=50
+set ruler               " show the cursor position all the time
+set showcmd             " display incomplete commands
+set nohlsearch          " don't continue to highlight searched phrases.
+set incsearch           " but do highlight as you type your search
+set autoread            " Automatically change files inside of vim when they are modified outside of vim
+set hidden
+set undolevels=1000
+set autoindent          " auto-indent
+set tabstop=4           " tab spacing
+set softtabstop=4       " unify
+set shiftwidth=4        " indent/outdent by 4 cols
+set shiftround          " always indent/outdent to the nearest tabstop
+set expandtab           " use spaces instead of tabs
+set smarttab            " use tabs at the start of a line, spaces elsewhere
+set smartcase
+set visualbell
+set noerrorbells
+set noswapfile
+
+set guifont=Monaco:h12
+set guioptions-=T       " Removes top toolbar
+set guioptions-=r       " Removes right hand scroll bar
+set go-=L           " Removes left hand scroll bar
+autocmd User Rails let b:surround_{char2nr('-')} = "<% \r %>" " displays <% %> correctly
+:set cpoptions+=$       " puts a $ marker for the end of words/lines in cw/c$ commands
+set textwidth=80
+set formatoptions+=t

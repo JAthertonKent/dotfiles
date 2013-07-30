@@ -1,0 +1,7 @@
+rm -Rf ~/.vim
+rm ~/.vimrc
+rm ~/.bash_profile
+
+ln -s ~/.dotfiles/vim/vim ~/.vim 
+ln -s ~/.dotfiles/vim/vimrc ~/.vimrc 
+ln -s ~/.dotfiles/bash_profile ~/.bash_profile 
