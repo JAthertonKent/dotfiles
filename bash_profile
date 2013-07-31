@@ -29,8 +29,9 @@ export PS1='\[\033[1;33m\][\@][\u@\h:\w]\[\033[0m\]\[\033[0;35m\]$(vcprompt)\[\0
 
 export SUDO_PS1='\[\033[1;31m\][\@][\u@\h:\w]\[\033[0m\]\n>: '
 
-export VCPROMPT_FORMAT=[%n:%b]"%m" vcprompt
+export VCPROMPT_FORMAT=[%n:%b]"%m"
 
 alias ls="ls -G"
-
 alias svn_clean="svn st | grep '^?' | awk '{print $2}' | xargs rm -rf"
+
+export PATH=$PATH:~/.dotfiles/bin
