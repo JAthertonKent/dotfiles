@@ -4,4 +4,5 @@ rm ~/.bash_profile
 
 ln -s ~/.dotfiles/vim/vim ~/.vim 
 ln -s ~/.dotfiles/vim/vimrc ~/.vimrc 
+ln -s ~/.dotfiles/vim/vimrc.bundles ~/.vimrc.bundles 
 ln -s ~/.dotfiles/bash_profile ~/.bash_profile 
