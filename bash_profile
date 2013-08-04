@@ -34,7 +34,7 @@ export VCPROMPT_FORMAT=[%n:%b]"%m"
 alias ls="ls -G"
 alias svn_clean="svn st | grep '^?' | awk '{print $2}' | xargs rm -rf"
 
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:/Users/pairing/.rvm/bin:/Users/pairing/.dotfiles/bin
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:~/.rvm/bin:~/.dotfiles/bin
 
 # -- GID Proxy Settings --
 function enable_proxy() {
