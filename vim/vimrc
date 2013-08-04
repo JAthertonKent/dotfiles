@@ -11,8 +11,9 @@ set nu              " show line numbers
 set laststatus=2        " Always display the status line
 filetype indent on      " activates indenting for files
 
-set rtp+=~/Users/pairing/.vim/bundle/vundle/ 
+set rtp+=~/.vim/bundle/vundle/ 
 call vundle#rc() 
+Bundle 'gmarik/vundle'
 Bundle 'airblade/vim-gitgutter'
 Bundle "scrooloose/nerdtree"
 Bundle 'tpope/vim-surround'
