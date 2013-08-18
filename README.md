@@ -6,6 +6,6 @@ Installing requires Git and triggers Git clone for each configured repo to ~/.vi
 
 If vim tells you that :BundleInstall is not a command, consider removing and pulling new Vundle:
 
- $ rm ~/.vim/bundle/vundle
+ $ rm -Rf ~/.vim/bundle/vundle
 
  $ git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
