@@ -32,8 +32,11 @@ export SUDO_PS1='\[\033[1;31m\][\@][\u@\h:\w]\[\033[0m\]\n>: '
 export VCPROMPT_FORMAT=[%n:%b]"%m"
 
 alias ls="ls -G"
+alias ll="ls -lp"
+
 alias mate="open -a /Applications/TextMate.app"
 alias idea="open -a /Applications/IntelliJ\ IDEA\ 12\ CE.app/"
+
 alias svn_clean="svn st | grep '^?' | awk '{print $2}' | xargs rm -rf"
 
 export PATH=$PATH:~/.rvm/bin:~/.dotfiles/bin
