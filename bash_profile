@@ -37,7 +37,17 @@ alias ll="ls -lp"
 alias mate="open -a /Applications/TextMate.app"
 alias idea="open -a /Applications/IntelliJ\ IDEA\ 12\ CE.app/"
 
+sublime() {
+    echo $1 | xargs touch; 
+    open -a /Applications/Sublime\ Text\ 2.app $1
+}
+
 alias svn_clean="svn st | grep '^?' | awk '{print $2}' | xargs rm -rf"
+alias kill_java="ps -Af | grep java | grep -v ttys | awk '{print $2}' | xargs kill -9"
 
-export PATH=$PATH:~/.rvm/bin:~/.dotfiles/bin
+export PATH=/usr/local/bin:$PATH:~/.rvm/bin:~/.dotfiles/bin
 
+#export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_25.jdk/Contents/Home
+export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/1.6.0/home
+
+source ~/.dotfiles/gid_profile
